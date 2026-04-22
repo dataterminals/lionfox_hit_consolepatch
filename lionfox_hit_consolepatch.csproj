@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <AssemblyName>lionfox_hit_consolepatch</AssemblyName>
+    <RootNamespace>lionfox_hit_consolepatch</RootNamespace>
+    <OutputPath>../lionfox_hit_consolepatch</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <!-- ── Adjust VS_PATH to your Vintage Story install directory ── -->
+  <PropertyGroup>
+    <VS_PATH Condition="'$(VS_PATH)' == ''">D:\Vintagestory</VS_PATH>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="VintagestoryAPI">
+      <HintPath>$(VS_PATH)\VintagestoryAPI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(VS_PATH)\Lib\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>

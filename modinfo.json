@@ -1,0 +1,13 @@
+{
+    "type": "code",
+    "modid": "lionfox_hit_consolepatch",
+    "name": "HIT Console Spam Fix",
+    "description": "Silences the leftover Console.WriteLine debug calls in Harper's Immersive Tools (HIT) that spam hotbar item contents on every inventory update. Uses a Harmony transpiler — silently no-ops if HIT is absent or updated.",
+    "authors": [ "lionfox" ],
+    "version": "1.0.0",
+    "side": "Universal",
+    "dependencies": {
+        "game": "1.20.0",
+        "hit": "2.4.3"
+    }
+}
