@@ -58,7 +58,6 @@ namespace lionfox_hit_consolepatch
         {
             var codes = new List<CodeInstruction>(instructions);
             var writeLine = typeof(Console).GetMethod("WriteLine", new[] { typeof(string) });
-            int removed = 0;
 
             for (int i = codes.Count - 1; i >= 0; i--)
             {
@@ -94,7 +93,6 @@ namespace lionfox_hit_consolepatch
                     var nop = new CodeInstruction(OpCodes.Nop);
                     nop.labels.AddRange(codes[j].labels);
                     codes[j] = nop;
-                    removed++;
                 }
             }
 
